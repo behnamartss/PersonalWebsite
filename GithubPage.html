@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #000, #1a1a1a);
+            color: #fff;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        #header p {
+            margin: 0;
+            padding: 0;
+            font-size: 1.3rem;
+            color: #FFD700;
+        }
+
+        #header p:nth-child(3) {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .top-section {
+            display: flex;
+            height: 70vh;
+            position: relative;
+        }
+
+        .left-side {
+            flex: 1;
+            background: linear-gradient(135deg, #444, #111);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 3px solid #FFD700;
+        }
+
+        .left-side img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid #FFD700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        .right-side {
+            flex: 1.2;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #121212;
+            box-shadow: -10px 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .right-side h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .right-side p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .bottom-section {
+            display: flex;
+            height: 50vh;
+            padding: 20px;
+        }
+
+        .clickable-div {
+            flex: 1;
+            margin: 15px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .clickable-div::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(0.8);
+            z-index: 1;
+            transition: filter 0.3s ease;
+        }
+
+        .clickable-div:nth-child(1)::before {
+            background-image: url('game-back.png');
+        }
+
+        .clickable-div:nth-child(2)::before {
+            background-image: url('datascience-back.png');
+        }
+
+        .clickable-div:hover::before {
+            filter: blur(0) brightness(1);
+        }
+
+        .clickable-div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 18px rgba(0, 0, 0, 0.7);
+        }
+
+        .clickable-div h2 {
+            position: relative;
+            font-size: 2rem;
+            text-align: center;
+            color: #FFD700;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+            border-radius: 10px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>Seyedbehnam Rad</p> 
+        <p>University of Genova</p>
+        <p>Contact: behnamrad.br@gmail.com</p>
+    </div>
+    <div class="top-section">
+        <div class="left-side">
+            <img src="GithubPic.jpg" alt="Your Picture">
+        </div>
+        <div class="right-side">
+            <h1>About Me</h1>
+            <p>
+                I am a dedicated software and data science engineer with a strong background in artificial intelligence and game development. 
+                With years of experience in Unity and data-driven AI solutions, I have a passion for creating impactful applications 
+                that merge creativity and technical expertise.
+            </p>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="clickable-div" onclick="location.href='#game-creation'">
+            <h2>Game Development</h2>
+        </div>
+        <div class="clickable-div" onclick="location.href='#ai-data-science'">
+            <h2>AI & Data Science</h2>
+        </div>
+    </div>
+</body>
+</html>
