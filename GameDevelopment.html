@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Development</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #111, #333);
+            color: #fff;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        #header p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #FFD700;
+        }
+
+        #teaser {
+            height: 50vh;
+            background: url('game-teaser.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+            border-bottom: 3px solid #FFD700;
+        }
+
+        #teaser h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .game-gallery {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .game-card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .game-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .game-description {
+            padding: 20px;
+            color: #ddd;
+            text-align: center;
+        }
+
+        .game-description h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .game-description p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #000;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ffc107;
+        }
+		.img-pic {
+		    border-radius: 30%;
+		}
+    </style>
+</head>
+<body>
+    <div id="header">
+	<a href="index.html"><img src="myLogo.jpg" width="100px" height="100px" class="img-pic" href="index.html"></img> </a>
+    <p>Game Development</p>
+        
+    </div>
+
+    <div id="teaser">
+        <h1>Teaser of My Latest Game</h1>
+    </div>
+
+    <div class="game-gallery">
+        <div class="game-card">
+            <div class="game-image" style="background-image: url('game1.jpg');"></div>
+            <div class="game-description">
+                <h2>Game Title 1</h2>
+                <p>A short description of the game, highlighting its key features and gameplay.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image" style="background-image: url('game2.jpg');"></div>
+            <div class="game-description">
+                <h2>Game Title 2</h2>
+                <p>A short description of the game, highlighting its key features and gameplay.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image" style="background-image: url('game3.jpg');"></div>
+            <div class="game-description">
+                <h2>Game Title 3</h2>
+                <p>A short description of the game, highlighting its key features and gameplay.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-button">Back to Main Page</a>
+</body>
+</html>
